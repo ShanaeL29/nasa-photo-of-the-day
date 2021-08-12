@@ -4,6 +4,9 @@ import "./App.css";
 import axios from 'axios';
 import Title from './Title'
 import ImageOfTheDay from './ImageOfTheDay'
+import Date from './Date'
+import Explanation from './Explanation'
+import Copyright from './Copyright'
 import { tsPropertySignature } from "@babel/types";
 import { props } from "bluebird";
 
@@ -27,7 +30,10 @@ function App() {
   return (
     <div className="App">
       <Title title={nasaData.title}/>
+      <Date date={nasaData.date} />
       <ImageOfTheDay image={nasaData.hdurl} />
+      <Explanation explanation={nasaData.explanation} />
+      <Copyright copyright={nasaData.copyright} />
     </div>
   );
 }
