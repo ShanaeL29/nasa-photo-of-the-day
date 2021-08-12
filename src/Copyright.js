@@ -1,13 +1,15 @@
-import React, { useEffect } from 'react';
+import React from "react";
 
-function Copyright (props) {
-    // const { image } = props;
+function Copyright({ copyright, error }) {
+  // function Copyright(props) {
+  // const { image } = props;
 
-    return (
-        <div>
-            <h1>{props.copyright}</h1>
-        </div>
-    )
+  //   {props.error !== "" ? null : <p>Copyright: {props.copyright}</p>} this is what was inside JSX
+  return (
+    <div className="copyright">
+      {error !== "" ? null : <p>Copyright: {copyright}</p>}
+    </div>
+  );
 }
 
-export default Copyright
+export default Copyright;

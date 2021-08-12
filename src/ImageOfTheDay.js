@@ -1,14 +1,13 @@
+import React from "react";
 
-import React, { useEffect } from 'react';
+function ImageOfTheDay(props) {
+  // const { image } = props;
 
-function ImageOfTheDay (props) {
-    // const { image } = props;
-
-    return(
-        <div>
-            <img src={props.image}/>
-        </div>
-    )
+  return (
+    <div className="dailyImage">
+      <img src={props.image} alt="Nasa's visual of the day" />
+    </div>
+  );
 }
 
-export default ImageOfTheDay
+export default ImageOfTheDay;

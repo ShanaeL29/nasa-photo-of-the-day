@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 
 function Explanation(props) {
-    const { explanation } = props;
+  const { explanation } = props;
 
-    return (
-        <div>
-            <h1>{explanation}</h1>
-        </div>
-    )
+  return (
+    <div className="explanation">
+      <p>{explanation}</p>
+    </div>
+  );
 }
 
 export default Explanation;

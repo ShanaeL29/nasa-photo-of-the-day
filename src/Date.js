@@ -1,13 +1,14 @@
-import React from 'react'
+import React from "react";
 
-function Date(props) {
-    const { date } = props;
+function Date({ date }) {
+  //give me the prop named date from props (in app.js) ..... we specify the date prop here
+  // const { date } = props;. Instead of saying give me date which comes from props^^^
 
-    return (
-        <div>
-            <h1>{date}</h1>
-        </div>
-    )
+  return (
+    <div className="date">
+      <h2>{date}</h2>
+    </div>
+  );
 }
 
 export default Date;
