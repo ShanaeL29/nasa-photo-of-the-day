@@ -12,14 +12,14 @@ import { props } from "bluebird";
 
 function App() {
 
-  const [nasaData, setData] = useState([]);
+  const [nasaData, setNasaData] = useState([]);
   const [err, setError] = useState(null);
 
   useEffect(() => {
     axios.get(`${BASE_URL}/apod?api_key=${API_KEY}`)
       .then(res=> {
         console.log(res.data);
-        setData(res.data);
+        setNasaData(res.data);
       })
       .catch(err => {
         console.error(err);
@@ -27,7 +27,7 @@ function App() {
       })
   }, [])
   
-  return (
+  return (//do we want these rendered to the DOM? do they each need separate divs?
     <div className="App">
       <Title title={nasaData.title}/>
       <Date date={nasaData.date} />
