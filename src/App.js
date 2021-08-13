@@ -32,6 +32,7 @@ function App() {
       {/*console.log('Do I happen first?')*/}
       {/*first loads (happens first) and nasaData does not have any data yet. components then render */}
       {error && <h1>{error}</h1>}
+      {/*{error ? <h1>{error}</h1> : null}*/}
       <Title title={nasaData.title} />
       <Date date={nasaData.date} />
       <ImageOfTheDay image={nasaData.url} />
